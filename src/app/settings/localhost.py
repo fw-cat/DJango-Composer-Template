@@ -18,7 +18,7 @@ DATABASES = {
         'USER': 'phper',
         'HOST': 'db',
         'PORT': '3306',
-        'NAME': 'ar_real_estate',
+        'NAME': 'django',
         'PASSWORD': 'secret',
     }
 }
