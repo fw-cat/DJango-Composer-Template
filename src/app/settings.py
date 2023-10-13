@@ -76,9 +76,9 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',
-        'USER': 'phper',
+        'USER': 'django',
         'HOST': 'db',
-        'PORT': '3306',
+        'PORT': '3308',
         'NAME': 'django',
         'PASSWORD': 'secret',
     }

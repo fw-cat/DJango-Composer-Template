@@ -2,3 +2,10 @@
 
 # Outline
 * 本プロジェクトはDocker Compose上にDJango Frameworkを設定するデフォルトテンプレートになります。
+
+# Startup
+~~~sh
+$ docker compose up
+or
+$ docker compose up -d
+~~~

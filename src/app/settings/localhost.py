@@ -15,10 +15,10 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',
-        'USER': 'phper',
+        'USER': 'django',
         'HOST': 'db',
         'PORT': '3306',
-        'NAME': 'django',
+        'NAME': 'django_test',
         'PASSWORD': 'secret',
     }
 }

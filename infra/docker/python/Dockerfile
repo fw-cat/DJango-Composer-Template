@@ -31,9 +31,10 @@ RUN pip install --upgrade setuptools
 RUN pip install -r requirements.txt
 RUN pip install PyMySQL
 RUN pip install djangorestframework
+RUN pip install cryptography
 
 ENV DJANGO_SETTINGS_MODULE=app.settings.localhost
 
 RUN django-admin startproject app
 
-ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
