@@ -9,3 +9,10 @@ $ docker compose up
 or
 $ docker compose up -d
 ~~~
+
+## Recompile Startup
+~~~sh
+$ docker compose up --build
+or
+$ docker compose up --build -d
+~~~
