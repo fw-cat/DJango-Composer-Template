@@ -17,20 +17,21 @@ or
 $ docker compose up --build -d
 ~~~
 
-# Login to Docker Containor
+# Create Project
+~~~sh
+$ docker compose exec web django-admin startproject app
+$ docker compose exec web python app/manage.py migrate
+$ docker compose exec web python app/manage.py createsuperuser
+## 空文字でroot、パスワードは何でも可
+~~~
+
+# Start DJango Project
+~~~sh
+$ docker compose exec web python app/manage.py runserver 0.0.0.0:8888
+~~~
+
+# Create Application
 ~~~sh
 $ docker compose exec web /bin/bash
-~~~
-
-# DJango Commands
-* DJango Frameworkの利用手順のまとめになります
-
-## DJangoの起動コマンド
-~~~sh
-$ python manage.py runserver 0.0.0.0:8000
-~~~
-
-## DJangoのアプリの追加コマンド
-~~~sh
-$ python manage.py startapp [app名、DB名]
-~~~
+$ cd app/
+$ python manage.py startapp [アプリケーション名,DB名]

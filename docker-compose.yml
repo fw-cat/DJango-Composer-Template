@@ -22,7 +22,6 @@ services:
     tty: true
     volumes:
       - ./src:/code
-      - django_cache:/code/app/__pycache__
     restart: always
     ports:
       - 8080:8000
