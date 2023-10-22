@@ -10,6 +10,13 @@ or
 $ docker compose up -d
 ~~~
 
+## Recompile Startup
+~~~sh
+$ docker compose up --build
+or
+$ docker compose up --build -d
+~~~
+
 # Create Project
 ~~~sh
 $ docker compose exec web django-admin startproject app
@@ -27,5 +34,4 @@ $ docker compose exec web python app/manage.py runserver 0.0.0.0:8888
 ~~~sh
 $ docker compose exec web /bin/bash
 $ cd app/
-$ python manage.py startapp [アプリケーション名]
-~~~
+$ python manage.py startapp [アプリケーション名,DB名]
