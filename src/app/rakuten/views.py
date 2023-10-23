@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import requests
+from dotenv import load_dotenv
+import os
 
 # Create your views here.
 def index(request):
@@ -7,10 +9,12 @@ def index(request):
 
 def result(request):
   if request.method == 'POST':
+    load_dotenv()
+
     keyword = request.POST.get('keyword', '')
     api_url = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706'
-    app_id = ''
-        
+    app_id = os.getenv('RAKUTEN_API_KEY')
+
     params = {
       'format': 'json',
       'keyword': keyword,
