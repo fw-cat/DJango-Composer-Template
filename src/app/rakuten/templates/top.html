@@ -10,5 +10,18 @@
   </head>
   <body>
     <h1>検索ページです</h1>
+    <form method="POST" action="/rakuten/result">
+      {% csrf_token %}
+      <input type="text" name="keyword" placeholder="キーワードを入力" value="{{ keyword }}">
+      <input type="submit" value="検索">
+    </form>
+
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li>{{ item.Item.itemName }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
   </body>
 </html>
