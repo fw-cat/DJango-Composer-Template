@@ -31,3 +31,5 @@ RUN pip install --upgrade setuptools
 RUN pip install -r requirements.txt
 RUN pip install PyMySQL
 RUN pip install cryptography
+RUN pip install requests
+RUN pip install python-dotenv
